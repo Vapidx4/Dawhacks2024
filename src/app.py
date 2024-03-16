@@ -5,37 +5,25 @@ import requests
 
 app = Flask(__name__)
 
-def getPlantData():
-    apiKey = "Kw7ifd2qzz7X8d2mvLzLwSE0Msm0VVFHYHT0g2GS3C6vRJii7N"
+def getPlantData(headers, payload):
 
-    with open("static/plant2.jpg", "rb") as image2string:
-        encodedString = base64.b64encode(image2string.read())
-
-    payload = {
-        "images": ["data:image/jpg;base64," + encodedString.decode("utf-8")],
-        "similar_images": True,
-        "health": "all"
-    }
-
-    headers = {
-        'Api-Key': apiKey,
-        'Content-Type': 'application/json'
-    }
+    print(headers)
+    print(payload)
 
     url = 'https://plant.id/api/v3/identification'
 
     response = requests.post(url, headers=headers, data=json.dumps(payload))
 
-    ## with open("data.json", "w") as file:
-        ## json.dump(response.json(), file, indent=4)
+    print(response)
+    print(response.json())
 
     return response.json()
 
-def parseJson():
+def parseJson(result):
 
     dataDict = {}
 
-    jsonResponse = getPlantData()
+    jsonResponse = result
 
     isHealthy = jsonResponse["result"]["is_healthy"]["binary"]
 
@@ -93,7 +81,12 @@ def home():
 @app.route('/upload', methods=['POST'])
 def upload():
     if request.method == 'POST':
-        data = parseJson()
+        print("Route is called")
+        headers = request.headers
+        payload = request.json
+        jsonData = getPlantData(headers, payload)
+        print(jsonData)
+        data = parseJson(jsonData)
     return jsonify(data)
 
 if __name__ == '__main__':
