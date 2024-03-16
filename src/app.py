@@ -5,17 +5,10 @@ import requests
 
 app = Flask(__name__)
 
-def getPlantData():
+def getPlantData(data):
     apiKey = "Kw7ifd2qzz7X8d2mvLzLwSE0Msm0VVFHYHT0g2GS3C6vRJii7N"
-
-    with open("static/plant2.jpg", "rb") as image2string:
-        encodedString = base64.b64encode(image2string.read())
-
-    payload = {
-        "images": ["data:image/jpg;base64," + encodedString.decode("utf-8")],
-        "similar_images": True,
-        "health": "all"
-    }
+     
+    
 
     headers = {
         'Api-Key': apiKey,
@@ -23,19 +16,26 @@ def getPlantData():
     }
 
     url = 'https://plant.id/api/v3/identification'
+    
+    #convert the data to a dictionary
+    data = json.loads(data)
+    #print the keys of the dictionary
+    print(data.keys())
+    
+    
 
-    response = requests.post(url, headers=headers, data=json.dumps(payload))
+    response = requests.post(url, headers=headers, data=data)
 
     ## with open("data.json", "w") as file:
         ## json.dump(response.json(), file, indent=4)
 
     return response.json()
 
-def parseJson():
+def parseJson(data):
 
     dataDict = {}
 
-    jsonResponse = getPlantData()
+    jsonResponse = getPlantData(data)
 
     isHealthy = jsonResponse["result"]["is_healthy"]["binary"]
 
@@ -92,8 +92,35 @@ def home():
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    if request.method == 'POST':
-        data = parseJson()
+    print("Request received")
+    
+    try:
+        body = request.get_json()
+        # print(body)
+        #print the type of the body
+        print(type(body))
+        
+        # Attempt to parse the JSON
+        data = json.dumps(body)
+        print(type(data))
+        # print(data)
+        
+        results = parseJson(data)
+        print(results)
+        # return jsonify(results)
+    except json.JSONDecodeError:
+        # If parsing fails, return an error response
+        return jsonify({"error": "Invalid JSON format in request body"}), 400
+    
+    
+    
+    
+    # data = parseJson(body)
+    
+    # if request.method == 'POST':
+    #     body =  request.json
+    #     print(body)
+    #     data = parseJson()
     return jsonify(data)
 
 if __name__ == '__main__':

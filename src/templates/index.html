@@ -86,8 +86,8 @@
   </section>
   <div id="capture-button-container"></div>
   <div class="text-slate-100" id="info-div">
-    <div class="card card-body bg-success">
-      <img id="captured-image" src="/static/flower.webp" alt="Captured Image" style="max-width: 10%; max-height: 10%;">
+    <div class="card card-body bg-success" id="data-container">
+      <img id="captured-image" src="/static/flower.webp" class="rounded-full" alt="Captured Image" style="max-width: 10%; max-height: 10%;">
     </div>
   </div>
 </main>
@@ -113,15 +113,24 @@
       var imageDataURL = canvas.toDataURL();
       // Update captured image src
       document.getElementById('captured-image').src = imageDataURL;
+      // empty the style  and replace it with height and width of 10%
+      document.getElementById('captured-image').style = "";
+      document.getElementById('captured-image').style.maxWidth = "25%";
+      document.getElementById('captured-image').style.maxHeight = "25%";
 
       //convert the image to base64
       var base64Image = imageDataURL.split(';base64,').pop();
       base64Image = base64Image.replace("image/png", "image/jpg");
+      console.log(base64Image);
+    //   decoded_image = base64.b64decode(base64_data)
+
+    //   console.log(decoded_image);
 
 
-      var apiKey = "Kw7ifd2qzz7X8d2mvLzLwSE0Msm0VVFHYHT0g2GS3C6vRJii7N";
+      var apiKey = "0A2Mg33DxvCjBsQ7kPy6O7R48a5fP0LDyQcPRtUoy695APn9EQ";
 
-      var url = "https://plant.id/api/v3/identification";
+      var url = "http://127.0.0.1:5000/upload";
+      url = "https://plant.id/api/v3/identification"
 
       var headers = {
         "Content-Type": "application/json",
@@ -133,6 +142,8 @@
         "similar_images": true,
         "health": "all"
       };
+
+      var species = "";
       
       fetch(url, {
         method: "POST",
@@ -140,26 +151,37 @@
         body: JSON.stringify(body)
         })
         .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error('Error:', error));
-        
+.then(data => {
+    console.log(data);
+    var speciesName = data.result.classification.suggestions[0].name;
+    var speciesElement = document.createElement('p');
+    var disease = data.result.disease;
+    
+    speciesElement.textContent = "Species: " + speciesName;
+    speciesElement.classList.add('text-center', 'my-3');
+    document.getElementById('info-div').appendChild(speciesElement);
+    document.getElementById('captured-image').src = data.result.classification.suggestions[0].similar_images[0].url;
 
-        //send the image to the backend
-                //send the image to the backend
-        //         $.ajax({
-        //   type: "POST",
-        //   url: "http://ec2-3-15-204-104.us-east-2.compute.amazonaws.com:5000/api/v1/analyze",
-        //     data: {
-        //         "images": ["data:image/jpg;base64," + base64Image],
-        //         "similar_images": true,
-        //         "health": "all"
-        //     },
-        //     success: function(response) {
-        //         console.log(response);
-        //     }
-    // });
+
+    if (disease && disease.length > 0) {
+        var diseaseListElement = document.createElement('ul');
+        diseaseListElement.classList.add('text-center', 'my-3');
         
+        disease.forEach(function(diseaseItem) {
+            console.log(diseaseItem);
+            var diseaseItemElement = document.createElement('li');
+            diseaseItemElement.textContent = "Disease: " + diseaseItem.name;
+            diseaseListElement.appendChild(diseaseItemElement);
+        });
+
+        document.getElementById('info-div').appendChild(diseaseListElement);
+    }
+})
+.catch(error => console.error('Error:', error));
+
     });
+
+    
 
     $('#camera-button').click(function(){
       navigator.mediaDevices.getUserMedia({ video: true })
