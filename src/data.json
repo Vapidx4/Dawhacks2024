@@ -1,0 +1,506 @@
+{
+    "access_token": "l4b6od81FageXUV",
+    "model_version": "plant_id:3.6.0",
+    "custom_id": null,
+    "input": {
+        "latitude": null,
+        "longitude": null,
+        "similar_images": true,
+        "health": "all",
+        "images": [
+            "https://plant.id/media/imgs/e8094e870e3244b8a16752ac0c2cba6b.jpg"
+        ],
+        "datetime": "2024-03-16T13:11:27.451013+00:00"
+    },
+    "result": {
+        "classification": {
+            "suggestions": [
+                {
+                    "id": "8c01f36143a9d81a",
+                    "name": "Petasites hybridus",
+                    "probability": 0.2545,
+                    "similar_images": [
+                        {
+                            "id": "bb71e445202d450c7d5d379564551dcf385a61d6",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/bb7/1e445202d450c7d5d379564551dcf385a61d6.jpeg",
+                            "similarity": 0.49,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/bb7/1e445202d450c7d5d379564551dcf385a61d6.small.jpeg"
+                        },
+                        {
+                            "id": "65f8a9eb8e04205ec63dc32e3daf0d5767b8bc52",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/65f/8a9eb8e04205ec63dc32e3daf0d5767b8bc52.jpeg",
+                            "similarity": 0.458,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/65f/8a9eb8e04205ec63dc32e3daf0d5767b8bc52.small.jpeg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "8c01f36143a9d81a"
+                    }
+                },
+                {
+                    "id": "ca4fbc6ac98a0afd",
+                    "name": "Arctium lappa",
+                    "probability": 0.2305,
+                    "similar_images": [
+                        {
+                            "id": "ae7b93a46146f8919283d5dad3d20494fffaff2f",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/ae7/b93a46146f8919283d5dad3d20494fffaff2f.jpeg",
+                            "similarity": 0.617,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/ae7/b93a46146f8919283d5dad3d20494fffaff2f.small.jpeg"
+                        },
+                        {
+                            "id": "14fd23ae0ad1dd161530904363a14e4b6d683a53",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/14f/d23ae0ad1dd161530904363a14e4b6d683a53.jpeg",
+                            "similarity": 0.522,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/14f/d23ae0ad1dd161530904363a14e4b6d683a53.small.jpeg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "ca4fbc6ac98a0afd"
+                    }
+                },
+                {
+                    "id": "2a0313497526a6cb",
+                    "name": "Arctium minus",
+                    "probability": 0.1648,
+                    "similar_images": [
+                        {
+                            "id": "81b4f0f320a58cb9e266528d078e7e949f6bb495",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/81b/4f0f320a58cb9e266528d078e7e949f6bb495.jpeg",
+                            "similarity": 0.494,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/81b/4f0f320a58cb9e266528d078e7e949f6bb495.small.jpeg"
+                        },
+                        {
+                            "id": "572bb1d540c21c590402f3f20499baa9ef4c7591",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/572/bb1d540c21c590402f3f20499baa9ef4c7591.jpeg",
+                            "similarity": 0.483,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/572/bb1d540c21c590402f3f20499baa9ef4c7591.small.jpeg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "2a0313497526a6cb"
+                    }
+                },
+                {
+                    "id": "6d2b18ab3aa137cd",
+                    "name": "Adenocaulon",
+                    "probability": 0.136,
+                    "similar_images": [
+                        {
+                            "id": "4151011d31d8bd922ed698734991f4e517f7a6ab",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/415/1011d31d8bd922ed698734991f4e517f7a6ab.jpeg",
+                            "license_name": "CC BY 4.0",
+                            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                            "citation": "Dmitrii Mostovoi",
+                            "similarity": 0.528,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/415/1011d31d8bd922ed698734991f4e517f7a6ab.small.jpeg"
+                        },
+                        {
+                            "id": "add08c60f8c516d90a040886f6fae50d26553ed6",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/add/08c60f8c516d90a040886f6fae50d26553ed6.jpeg",
+                            "license_name": "CC BY 4.0",
+                            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                            "citation": "\u041a\u0438\u043c \u0412\u0438\u043a\u0442\u043e\u0440\u0438\u044f",
+                            "similarity": 0.513,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/add/08c60f8c516d90a040886f6fae50d26553ed6.small.jpeg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "6d2b18ab3aa137cd"
+                    }
+                },
+                {
+                    "id": "b7c7c69cdb174e51",
+                    "name": "Rapistrum rugosum",
+                    "probability": 0.0916,
+                    "similar_images": [
+                        {
+                            "id": "9e80c489a0e34a592bb8edd51bb9e8323a58a23a",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/9e8/0c489a0e34a592bb8edd51bb9e8323a58a23a.jpeg",
+                            "license_name": "CC BY 4.0",
+                            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                            "citation": "Monteiro Henrique",
+                            "similarity": 0.521,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/9e8/0c489a0e34a592bb8edd51bb9e8323a58a23a.small.jpeg"
+                        },
+                        {
+                            "id": "7268e9fbd363075ebfd9c0ea561fea41bb16b739",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/726/8e9fbd363075ebfd9c0ea561fea41bb16b739.jpeg",
+                            "license_name": "CC BY 4.0",
+                            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                            "citation": "Annika Lindqvist",
+                            "similarity": 0.396,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/726/8e9fbd363075ebfd9c0ea561fea41bb16b739.small.jpeg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "b7c7c69cdb174e51"
+                    }
+                },
+                {
+                    "id": "862848235c58efb1",
+                    "name": "Nicotiana",
+                    "probability": 0.0319,
+                    "similar_images": [
+                        {
+                            "id": "89658e87d5ee620dc1b5c9d715ea80a831107db2",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/896/58e87d5ee620dc1b5c9d715ea80a831107db2.jpg",
+                            "license_name": "CC0",
+                            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                            "citation": "Ulf Persson",
+                            "similarity": 0.485,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/896/58e87d5ee620dc1b5c9d715ea80a831107db2.small.jpg"
+                        },
+                        {
+                            "id": "5fd53670bb90fb784b73d038a59a8016b28302ba",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/5fd/53670bb90fb784b73d038a59a8016b28302ba.jpeg",
+                            "similarity": 0.474,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/5fd/53670bb90fb784b73d038a59a8016b28302ba.small.jpeg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "862848235c58efb1"
+                    }
+                },
+                {
+                    "id": "9d28b135655e4bda",
+                    "name": "Petasites albus",
+                    "probability": 0.0206,
+                    "similar_images": [
+                        {
+                            "id": "101d4254d70471bb23487b20e72f5f46e2dff0f2",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/101/d4254d70471bb23487b20e72f5f46e2dff0f2.jpeg",
+                            "similarity": 0.374,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/101/d4254d70471bb23487b20e72f5f46e2dff0f2.small.jpeg"
+                        },
+                        {
+                            "id": "9b33a2377fc8277c5dc7e8fcddaf29f4a50020ad",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/9b3/3a2377fc8277c5dc7e8fcddaf29f4a50020ad.jpeg",
+                            "license_name": "CC BY-SA 4.0",
+                            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                            "citation": "Philippe BARDET",
+                            "similarity": 0.368,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/9b3/3a2377fc8277c5dc7e8fcddaf29f4a50020ad.small.jpeg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "9d28b135655e4bda"
+                    }
+                },
+                {
+                    "id": "3c6eeeb58171671a",
+                    "name": "Arctium tomentosum",
+                    "probability": 0.0154,
+                    "similar_images": [
+                        {
+                            "id": "c436a4dfdeefd8503d1e785c76de00b8d336e596",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/c43/6a4dfdeefd8503d1e785c76de00b8d336e596.jpg",
+                            "license_name": "CC BY 4.0",
+                            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                            "citation": "\u0412\u0438\u043a\u0442\u043e\u0440\u0438\u044f \u0411\u0438\u043b\u043e\u0443\u0441",
+                            "similarity": 0.54,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/c43/6a4dfdeefd8503d1e785c76de00b8d336e596.small.jpg"
+                        },
+                        {
+                            "id": "24ecc8afde4506a863d6be5be414bb526e168443",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/24e/cc8afde4506a863d6be5be414bb526e168443.jpeg",
+                            "similarity": 0.519,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/24e/cc8afde4506a863d6be5be414bb526e168443.small.jpeg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "3c6eeeb58171671a"
+                    }
+                },
+                {
+                    "id": "45e609618963a7d6",
+                    "name": "Brassica juncea",
+                    "probability": 0.0121,
+                    "similar_images": [
+                        {
+                            "id": "4829b698746839a024e98905f0fcfc269042bf26",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/482/9b698746839a024e98905f0fcfc269042bf26.jpeg",
+                            "similarity": 0.392,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/482/9b698746839a024e98905f0fcfc269042bf26.small.jpeg"
+                        },
+                        {
+                            "id": "0448bc650a6e03204c98c9dd9a4d71ce24cc5953",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/044/8bc650a6e03204c98c9dd9a4d71ce24cc5953.jpg",
+                            "license_name": "CC BY 4.0",
+                            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                            "citation": "Dmitriy Bochkov",
+                            "similarity": 0.355,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/044/8bc650a6e03204c98c9dd9a4d71ce24cc5953.small.jpg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "45e609618963a7d6"
+                    }
+                },
+                {
+                    "id": "f76839e97eb7e8c8",
+                    "name": "Brassica rapa",
+                    "probability": 0.0113,
+                    "similar_images": [
+                        {
+                            "id": "e6cdd193f44e9c4bd5d040c1a957e014305d519b",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/e6c/dd193f44e9c4bd5d040c1a957e014305d519b.jpeg",
+                            "similarity": 0.375,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/e6c/dd193f44e9c4bd5d040c1a957e014305d519b.small.jpeg"
+                        },
+                        {
+                            "id": "bf91721e2ca3ea2261a040ca198f2a59d56b8d89",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/bf9/1721e2ca3ea2261a040ca198f2a59d56b8d89.jpeg",
+                            "similarity": 0.371,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/bf9/1721e2ca3ea2261a040ca198f2a59d56b8d89.small.jpeg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "f76839e97eb7e8c8"
+                    }
+                }
+            ]
+        },
+        "is_healthy": {
+            "binary": false,
+            "threshold": 0.525,
+            "probability": 0.1000375747680664
+        },
+        "is_plant": {
+            "probability": 0.99999857,
+            "threshold": 0.5,
+            "binary": true
+        },
+        "disease": {
+            "suggestions": [
+                {
+                    "id": "bf75abeaaafd6c6f",
+                    "name": "feeding damage by insects",
+                    "probability": 0.9795,
+                    "similar_images": [
+                        {
+                            "id": "8aa90048efba9b1a72f6c0ba01f7971f8b69f198",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/8aa/90048efba9b1a72f6c0ba01f7971f8b69f198.jpg",
+                            "similarity": 0.652,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/8aa/90048efba9b1a72f6c0ba01f7971f8b69f198.small.jpg"
+                        },
+                        {
+                            "id": "8e8ef44d370b9142ef2448cbec82e7e354cdc1bf",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/8e8/ef44d370b9142ef2448cbec82e7e354cdc1bf.jpg",
+                            "similarity": 0.622,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/8e8/ef44d370b9142ef2448cbec82e7e354cdc1bf.small.jpg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "bf75abeaaafd6c6f"
+                    }
+                },
+                {
+                    "id": "d24ebab7c0155e4b",
+                    "name": "Animalia",
+                    "probability": 0.9762,
+                    "similar_images": [
+                        {
+                            "id": "8aa90048efba9b1a72f6c0ba01f7971f8b69f198",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/8aa/90048efba9b1a72f6c0ba01f7971f8b69f198.jpg",
+                            "similarity": 0.652,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/8aa/90048efba9b1a72f6c0ba01f7971f8b69f198.small.jpg"
+                        },
+                        {
+                            "id": "13049b07220a737066a0f54542d16d856153f376",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/130/49b07220a737066a0f54542d16d856153f376.jpg",
+                            "similarity": 0.651,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/130/49b07220a737066a0f54542d16d856153f376.small.jpg"
+                        }
+                    ],
+                    "redundant": true,
+                    "details": {
+                        "language": "en",
+                        "entity_id": "d24ebab7c0155e4b"
+                    }
+                },
+                {
+                    "id": "76e471140b1b55e2",
+                    "name": "Insecta",
+                    "probability": 0.9534,
+                    "similar_images": [
+                        {
+                            "id": "b5bffbe92381ce632033934791923baf89712e73",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/b5b/ffbe92381ce632033934791923baf89712e73.jpg",
+                            "similarity": 0.644,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/b5b/ffbe92381ce632033934791923baf89712e73.small.jpg"
+                        },
+                        {
+                            "id": "3e8e0d7aaa3571967415ed0d2b46c778b6f15aa0",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/3e8/e0d7aaa3571967415ed0d2b46c778b6f15aa0.jpg",
+                            "similarity": 0.639,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/3e8/e0d7aaa3571967415ed0d2b46c778b6f15aa0.small.jpg"
+                        }
+                    ],
+                    "redundant": true,
+                    "details": {
+                        "language": "en",
+                        "entity_id": "76e471140b1b55e2"
+                    }
+                },
+                {
+                    "id": "53aac959aba8302b",
+                    "name": "mechanical damage",
+                    "probability": 0.3849,
+                    "similar_images": [
+                        {
+                            "id": "22aafecf29c3fceb5e12b35a219e03160c47b168",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/22a/afecf29c3fceb5e12b35a219e03160c47b168.jpg",
+                            "similarity": 0.648,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/22a/afecf29c3fceb5e12b35a219e03160c47b168.small.jpg"
+                        },
+                        {
+                            "id": "66dc7131eee349614c5efb734f283fd2afa47103",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/66d/c7131eee349614c5efb734f283fd2afa47103.jpg",
+                            "similarity": 0.535,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/66d/c7131eee349614c5efb734f283fd2afa47103.small.jpg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "53aac959aba8302b"
+                    }
+                },
+                {
+                    "id": "7f22438065988f95",
+                    "name": "Fungi",
+                    "probability": 0.2356,
+                    "similar_images": [
+                        {
+                            "id": "412eb4c528ed79ed8ea39e552f5462630136c448",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/412/eb4c528ed79ed8ea39e552f5462630136c448.jpg",
+                            "similarity": 0.41,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/412/eb4c528ed79ed8ea39e552f5462630136c448.small.jpg"
+                        },
+                        {
+                            "id": "a61ca9b19c80e4392c351275a59e859e85afb0a4",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/a61/ca9b19c80e4392c351275a59e859e85afb0a4.jpg",
+                            "similarity": 0.388,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/a61/ca9b19c80e4392c351275a59e859e85afb0a4.small.jpg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "7f22438065988f95"
+                    }
+                },
+                {
+                    "id": "98fc3d10c2d369c7",
+                    "name": "leaf miners",
+                    "probability": 0.2067,
+                    "similar_images": [
+                        {
+                            "id": "edc9c253eacb1016989593310f256c4987af75d6",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/edc/9c253eacb1016989593310f256c4987af75d6.jpeg",
+                            "license_name": "CC BY 3.0",
+                            "license_url": "https://creativecommons.org/licenses/by/3.0/",
+                            "citation": "Gyorgy Csoka, Hungary Forest Research Institute, Bugwood.org ",
+                            "similarity": 0.538,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/edc/9c253eacb1016989593310f256c4987af75d6.small.jpeg"
+                        },
+                        {
+                            "id": "f9691d516e4fb3fc8ed23d09a0cc3806d9223e0d",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/f96/91d516e4fb3fc8ed23d09a0cc3806d9223e0d.jpg",
+                            "similarity": 0.509,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/f96/91d516e4fb3fc8ed23d09a0cc3806d9223e0d.small.jpg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "98fc3d10c2d369c7"
+                    }
+                },
+                {
+                    "id": "41278aaeba243cfe",
+                    "name": "sap-sucking pests",
+                    "probability": 0.1675,
+                    "similar_images": [
+                        {
+                            "id": "a703fbde48bb63adae2bcd46c6c73965f6890212",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/a70/3fbde48bb63adae2bcd46c6c73965f6890212.jpg",
+                            "similarity": 0.518,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/a70/3fbde48bb63adae2bcd46c6c73965f6890212.small.jpg"
+                        },
+                        {
+                            "id": "84a311bc87d0a7d22cde85470d156c550df1e7ce",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/84a/311bc87d0a7d22cde85470d156c550df1e7ce.jpg",
+                            "similarity": 0.483,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/84a/311bc87d0a7d22cde85470d156c550df1e7ce.small.jpg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "41278aaeba243cfe"
+                    }
+                },
+                {
+                    "id": "765b06482c4e4ae9",
+                    "name": "nutrient deficiency",
+                    "probability": 0.1341,
+                    "similar_images": [
+                        {
+                            "id": "fc73183e5dc7b7104b599de22c37cc7daf712b3a",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/fc7/3183e5dc7b7104b599de22c37cc7daf712b3a.jpg",
+                            "similarity": 0.481,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/fc7/3183e5dc7b7104b599de22c37cc7daf712b3a.small.jpg"
+                        },
+                        {
+                            "id": "189b31f57c00bec7b8cafd4fbc548c450255e998",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/189/b31f57c00bec7b8cafd4fbc548c450255e998.jpg",
+                            "similarity": 0.327,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/189/b31f57c00bec7b8cafd4fbc548c450255e998.small.jpg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "765b06482c4e4ae9"
+                    }
+                },
+                {
+                    "id": "5410caa10cfea0f3",
+                    "name": "Bacteria",
+                    "probability": 0.0912,
+                    "similar_images": [
+                        {
+                            "id": "12085e5ad1d14b6c0bba7e14e2f707158b0dfe77",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/120/85e5ad1d14b6c0bba7e14e2f707158b0dfe77.jpg",
+                            "similarity": 0.5,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/120/85e5ad1d14b6c0bba7e14e2f707158b0dfe77.small.jpg"
+                        },
+                        {
+                            "id": "a5016cfaf93ef57e3372b6c65c483d4171988612",
+                            "url": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/a50/16cfaf93ef57e3372b6c65c483d4171988612.jpg",
+                            "similarity": 0.479,
+                            "url_small": "https://plant-id.ams3.cdn.digitaloceanspaces.com/similar_images/3/a50/16cfaf93ef57e3372b6c65c483d4171988612.small.jpg"
+                        }
+                    ],
+                    "details": {
+                        "language": "en",
+                        "entity_id": "5410caa10cfea0f3"
+                    }
+                }
+            ]
+        }
+    },
+    "status": "COMPLETED",
+    "sla_compliant_client": true,
+    "sla_compliant_system": true,
+    "created": 1710594687.451013,
+    "completed": 1710594687.863652
+}
