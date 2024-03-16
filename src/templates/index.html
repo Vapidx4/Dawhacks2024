@@ -85,7 +85,7 @@
     <button id="camera-button" class="btn btn-primary h-full w-full rounded-circle">Camera</button>
   </section>
   <div id="capture-button-container"></div>
-  <div class="text-slate-100" id="info-div">
+  <div class="text-slate-100 overflow-y-auto bg-emerald-800" id="info-div">
     <div class="card card-body bg-success" id="data-container">
       <img id="captured-image" src="/static/flower.webp" class="rounded-full" alt="Captured Image" style="max-width: 10%; max-height: 10%;">
     </div>
@@ -155,22 +155,27 @@
     console.log(data);
     var speciesName = data.result.classification.suggestions[0].name;
     var speciesElement = document.createElement('p');
-    var disease = data.result.disease;
+    var disease = data.result.disease.suggestions;
     
     speciesElement.textContent = "Species: " + speciesName;
-    speciesElement.classList.add('text-center', 'my-3');
+    speciesElement.classList.add('text-center', 'my-3', "text-3xl");
     document.getElementById('info-div').appendChild(speciesElement);
     document.getElementById('captured-image').src = data.result.classification.suggestions[0].similar_images[0].url;
 
-
+    console.log(disease);
     if (disease && disease.length > 0) {
         var diseaseListElement = document.createElement('ul');
-        diseaseListElement.classList.add('text-center', 'my-3');
+        // add disease header 
+        var diseaseHeader = document.createElement('h2');
+        diseaseHeader.textContent = "Diseases";
+        diseaseHeader.classList.add('text-center', 'my-3', "text-2xl");
+        document.getElementById('info-div').appendChild(diseaseHeader);
+        diseaseListElement.classList.add('text-center', 'my-3',);
         
         disease.forEach(function(diseaseItem) {
             console.log(diseaseItem);
             var diseaseItemElement = document.createElement('li');
-            diseaseItemElement.textContent = "Disease: " + diseaseItem.name;
+            diseaseItemElement.textContent = diseaseItem.name;
             diseaseListElement.appendChild(diseaseItemElement);
         });
 
