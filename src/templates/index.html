@@ -4,31 +4,151 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      /* text-align: center; */
+    }
+
+    .info-div {
+        /* border-top-right-radius: 4rem;
+        border-top-left-radius: 4rem; */
+    }
+
+    main {
+        background-color: #25559F;
+    }
+
+    #camera-container {
+        position: relative;
+        overflow: hidden;
+        background-color: #30AD4B;
+        border: #0f3e19;
+        border-width: 2em;
+    }
+
+    #camera-container video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    #camera-container button {
+        background-color: #30AD4B;
+    }
+
+    #capture-button-container {
+        text-align: center;
+        margin-bottom: 10em;
+    }
+
+    #info-button {
+        background-color: #30AD4B;
+    }
+
+    .info-div {
+        display: flex;
+        background-color: #30AD4B;
+
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-  <button id="selectBtn">Select an image</button>
-  <button id="takeBtn">Take an image</button>
-</div>
+<main class="container-fluid flex flex-col justify-between text-white w-3/4 h-full p-0">
+    <header class="text-center">
+        <h1 class="text-8xl">GreenToken</h1>
+        <p>Discover. Learn. Solve.</p>
+    </header>
+    <section class="w-96 h-96 rounded-circle mx-auto mt-12 flex items-center justify-center" id="camera-container">
+        <button id="camera-button" class="btn btn-primary h-full w-full rounded-circle">Camera</button>
+    </section>
+    <div id="capture-button-container"></div>
+    <div class="text-slate-100" id="info-div">
+        <div class="card card-body bg-success">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </div>
+    <!-- <article class="info-div text-center bg-lime-600 h-1/2 flex-grow mt-96">
+        <h2 class="text-6xl">Section 1</h2>
+        <p>This is some text.</p>
+    </article> -->
+</main>
+
 <script>
-  document.getElementById('selectBtn').addEventListener('click', function() {
-    let input = document.createElement('input');
-    input.type = 'file';
-    input.accept = 'image/*'; // Accept only image files
-    input.onchange = function(event) {
-    let files = event.target.files;
-    if (files.length > 0) {
-      let selectedImage = files[0];
-      console.log('Selected image:', selectedImage);
-      // You can perform further processing here, like uploading the image or displaying a preview
-    }
-    };
-    input.click();
+  $(document).ready(function(){
+    var captureButton = document.createElement('button');
+          captureButton.textContent = 'Capture';
+          captureButton.classList.add('btn', 'btn-primary');
+          captureButton.id = 'info-button';
+          captureButton.type = 'button';
+          //set toggle attribute to button
+        //   captureButton.setAttribute('data-toggle', 'collapse');
+        //   captureButton.setAttribute('data-target', '#info-div');
+        //   captureButton.setAttribute('aria-expanded', 'false');
+        //   captureButton.setAttribute('aria-controls', 'info-div');
+
+    $('#camera-button').click(function(){
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+            // Creating the video element and append it
+          var video = document.createElement('video');
+          video.autoplay = true;
+          video.srcObject = stream;
+          video.classList.add('w-full', 'h-full', 'rounded-circle');
+
+          // Create a div for the capture button and append the button
+          var buttonContainer = document.getElementById('capture-button-container');
+          buttonContainer.innerHTML = ''; // Clear previous content
+          buttonContainer.appendChild(captureButton);
+
+          document.getElementById('camera-container').innerHTML = null;
+          document.getElementById('camera-container').appendChild(video);
+        })
+        .catch(function(err) {
+          console.error('Error accessing the camera: ', err);
+        });
+    });
   });
+
+    // $('#info-button').click(function(){
+    //     console.log('info button clicked');
+        
+    //     // get the class of #info-div
+    //     var infoDiv = document.getElementById('info-div');
+    //     var infoDivClass = infoDiv.classList;
+    //     // parse the list to see if it contains an element called 'collapse'
+    //     var infoDivClassList = infoDivClass.toString().split(' ');
+    //     var toggleIndex = infoDivClassList.indexOf('collapse');
+
+    //     //sets states of the collapsible div
+    //     if (toggleIndex > -1) {
+    //         //remove the class after 700ms
+    //         setTimeout(function(){
+    //             infoDiv.classList.remove('collapse');
+    //         }, 5000);
+    //     } else {
+    //         //add the class
+    //         infoDiv.classList.add('collapse');
+    //     }
+        
+    // });
 </script>
 
 </body>
