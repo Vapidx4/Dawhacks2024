@@ -1,5 +1,5 @@
 {
-    "access_token": "l4b6od81FageXUV",
+    "access_token": "pAWyAafuTpmDYGP",
     "model_version": "plant_id:3.6.0",
     "custom_id": null,
     "input": {
@@ -8,9 +8,9 @@
         "similar_images": true,
         "health": "all",
         "images": [
-            "https://plant.id/media/imgs/e8094e870e3244b8a16752ac0c2cba6b.jpg"
+            "https://plant.id/media/imgs/f68658a6f2a841ea819991078a1671c7.jpg"
         ],
-        "datetime": "2024-03-16T13:11:27.451013+00:00"
+        "datetime": "2024-03-16T15:34:45.608030+00:00"
     },
     "result": {
         "classification": {
@@ -276,11 +276,6 @@
             "threshold": 0.525,
             "probability": 0.1000375747680664
         },
-        "is_plant": {
-            "probability": 0.99999857,
-            "threshold": 0.5,
-            "binary": true
-        },
         "disease": {
             "suggestions": [
                 {
@@ -496,11 +491,16 @@
                     }
                 }
             ]
+        },
+        "is_plant": {
+            "probability": 0.99999857,
+            "threshold": 0.5,
+            "binary": true
         }
     },
     "status": "COMPLETED",
     "sla_compliant_client": true,
     "sla_compliant_system": true,
-    "created": 1710594687.451013,
-    "completed": 1710594687.863652
+    "created": 1710603285.60803,
+    "completed": 1710603286.320816
 }
