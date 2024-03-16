@@ -15,21 +15,22 @@ def getPlantData(headers, payload):
     response = requests.post(url, headers=headers, data=json.dumps(payload))
 
     print(response)
-    print(response.json())
 
-    return response.json()
+    try:
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print("Error:", e)
+        return None
 
 def parseJson(result):
 
     dataDict = {}
 
-    jsonResponse = result
+    isHealthy = result["result"]["is_healthy"]["binary"]
 
-    isHealthy = jsonResponse["result"]["is_healthy"]["binary"]
+    isPlant = result["result"]["is_plant"]["binary"]
 
-    isPlant = jsonResponse["result"]["is_plant"]["binary"]
-
-    classifications = jsonResponse["result"]["classification"]["suggestions"]
+    classifications = result["result"]["classification"]["suggestions"]
 
     classificationDict = {
         "name": [],
@@ -49,7 +50,7 @@ def parseJson(result):
                     similarityDict["similarImage"].append(similarImage["url"])
                     similarityDict["similarity"].append(str(round(float(similarImage["similarity"]) * 10000)/100) + "%")
     
-    diseases = jsonResponse["result"]["disease"]["suggestions"]
+    diseases = result["result"]["disease"]["suggestions"]
 
     diseaseDict = {
         "disease": [],
@@ -73,7 +74,6 @@ def parseJson(result):
     return dataDict
 
 
-
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -87,7 +87,8 @@ def upload():
         jsonData = getPlantData(headers, payload)
         print(jsonData)
         data = parseJson(jsonData)
-    return jsonify(data)
+        print(data)
+        return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True)
